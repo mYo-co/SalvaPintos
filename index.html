@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#063b2b">
+  <meta name="description" content="Organiza melhor os cuidados dos teus pintos desde os primeiros dias com o Kit Salva Pintos da mYo. Mais organização, menos improviso e materiais de apoio num só lugar.">
+  <title>Kit Salva Pintos | mYo — Cuida · Nutre · Vive</title>
+  <style>
+    :root {
+      --green: #063b2b; --green-2: #0b563d; --green-3: #147447;
+      --gold: #f5c842; --gold-2: #ffe58a; --cream: #fffaf0;
+      --ink: #10251c; --muted: #53645a; --line: #e5e9e2;
+      --radius: 20px; --shadow: 0 18px 45px rgba(4, 40, 28, .13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; color: var(--ink); background: #fff; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    .nav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.82); border-bottom: 1px solid rgba(255,255,255,.72); box-shadow: 0 8px 28px rgba(6,59,43,.07); backdrop-filter: blur(22px) saturate(165%); -webkit-backdrop-filter: blur(22px) saturate(165%); }
+    .nav-inner { width: min(1120px, 100%); margin: auto; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--green); }
+    .brand-mark { font-family: Georgia, serif; font-size: 2rem; font-weight: 900; letter-spacing: -.09em; line-height: 1; }
+    .brand-mark i { color: #68a72d; font-style: normal; }
+    .brand small { display: block; font-size: .58rem; letter-spacing: .1em; font-weight: 800; }
+    .wrap { width: min(920px, 100%); margin-inline: auto; padding-inline: 18px; }
+    .hero { padding: 0 !important; background: #f7fbf5; }
+    .hero-full, .full-bleed-image { width: 100%; }
+    .full-bleed-image { display: block; margin: 0; padding: 0; overflow: hidden; }
+    .hero-art img { width: 100%; height: auto; border-radius: 0 !important; }
+    .section { padding: 48px 0; }
+    .section.soft { background: var(--cream); }
+    .section-head { max-width: 760px; margin: 0 auto 24px; text-align: center; }
+    .kicker { color: var(--green-3); font-size: .74rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+    h2 { margin: 9px 0 14px; font-size: clamp(1.85rem, 7vw, 3.05rem); line-height: 1.08; letter-spacing: -.045em; color: var(--green); }
+    .section-head p { margin: 0; color: var(--muted); font-size: 1rem; }
+    .story { max-width: 720px; margin: auto; }
+    .story p { margin: 0 0 15px; }
+    .story strong { color: var(--green); }
+    .highlight { border-left: 4px solid var(--gold); background: #fff; padding: 17px 18px; border-radius: 0 14px 14px 0; margin: 22px 0; box-shadow: 0 8px 25px rgba(4,40,28,.05); }
+    .benefits { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
+    .benefit { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 17px; }
+    .benefit b { display: block; color: var(--green); margin-bottom: 4px; }
+    .benefit p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .offer-layout { display: block !important; gap: 0 !important; align-items: center; }
+    .offer-image { display: block; width: 100vw; margin-left: calc(50% - 50vw); border-radius: 0 !important; box-shadow: none !important; cursor: pointer; }
+    .offer-image img { width: 100%; height: auto; border-radius: 0 !important; }
+    .offer-cta-wrap { width: min(calc(100% - 36px), 620px); margin: 22px auto 0; }
+    .cta { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; min-height: 58px; border: 1px solid rgba(255,255,255,.75); border-radius: 16px; padding: 15px 20px; text-decoration: none; text-align: center; color: #092c1d; background: linear-gradient(180deg, #ffe47a, #f4bd24); box-shadow: 0 8px 24px rgba(168,120,0,.18), inset 0 1px 0 rgba(255,255,255,.7); font-weight: 950; font-size: 1rem; line-height: 1.25; transition: transform .15s ease; }
+    .cta:hover { transform: translateY(-2px); }
+    .cta .arrow { font-size: 1.25rem; flex: 0 0 auto; }
+    .offer-cta { width: 100%; min-height: 62px; border-radius: 18px; font-size: 1rem; }
+    .offer-image:focus-visible, .offer-cta:focus-visible { outline: 3px solid #0c6248; outline-offset: 4px; }
+    .photo-carousel { width: 100%; position: relative; overflow: hidden; background: #f5f5ef; isolation: isolate; }
+    .photo-carousel .carousel-track { display: flex; width: 100%; transition: transform .7s cubic-bezier(.22,.61,.36,1); will-change: transform; }
+    .photo-carousel .carousel-slide { flex: 0 0 100%; min-width: 100%; margin: 0; aspect-ratio: 4 / 3; overflow: hidden; }
+    .photo-carousel .carousel-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .photo-carousel .carousel-dots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; justify-content: center; align-items: center; gap: 7px; pointer-events: none; }
+    .photo-carousel .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.58); border: 1px solid rgba(6,59,43,.25); box-shadow: 0 1px 5px rgba(0,0,0,.2); }
+    .photo-carousel .carousel-dot.active { width: 20px; border-radius: 99px; background: #f5c842; }
+    .photo-carousel-gap, .photo-carousel-before-offer { margin: 0; }
+    .final-cta { text-align: center; max-width: 700px; margin: auto; }
+    .final-cta p { color: var(--muted); }
+    .disclaimer { max-width: 760px; margin: 20px auto 0; font-size: .78rem; line-height: 1.5; color: #d5e4da; }
+    .footer { background: #04271c; color: #d5e4da; padding: 26px 0 30px; font-size: .8rem; }
+    .footer-inner { display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; }
+    .footer b { color: white; }
+    @media (min-width: 680px) {
+      .nav-inner { padding-block: 15px; }
+      .section { padding: 68px 0; }
+      .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .photo-carousel .carousel-slide { aspect-ratio: 16 / 9; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } .photo-carousel .carousel-track { transition: none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio" aria-label="mYo início">
+        <span class="brand-mark">mY<i>o</i></span>
+        <span><small>CUIDA · NUTRE · VIVE</small></span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero hero-full" id="inicio" aria-label="Kit Salva Pintos mYo">
+      <a class="full-bleed-image hero-art" href="#dor" aria-label="Conhecer o Kit Salva Pintos">
+        <img src="assets/hero-myo.jpg" alt="Kit Salva Pintos mYo apresentado com guias digitais e materiais de apoio." fetchpriority="high">
+      </a>
+    </section>
+
+    <section class="section soft" id="dor">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">O esforço merece cuidado</span>
+          <h2>Cada pinto perdido pesa no teu bolso — e no teu esforço.</h2>
+          <p>Não deixes que pequenos descuidos compliquem uma criação na qual investiste dinheiro, tempo e dedicação.</p>
+        </div>
+        <div class="story">
+          <p>Imagina comprar os pintos, preparar o espaço, investir em ração e dedicar o teu tempo à criação… mas começar a enfrentar dificuldades porque não sabes exactamente quais cuidados devem ser prioritários nos primeiros dias.</p>
+          <p><strong>Dói, não é?</strong> Porque cada pinto perdido representa mais do que um animal: representa dinheiro, esforço e uma parte do lucro que esperavas conseguir.</p>
+          <div class="highlight"><strong>O problema nem sempre é falta de vontade de fazer bem.</strong> Muitas vezes, é não ter a informação certa, organizada e acessível no momento em que precisas dela.</div>
+          <p>Criar pintos exige atenção, organização e cuidados adequados desde o início. Estar melhor preparado pode ajudar-te a organizar a rotina e a prestar mais atenção às necessidades da criação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-carousel photo-carousel-gap" aria-label="Galeria de imagens mYo">
+      <div class="carousel-track" id="laboratorioTrack">
+        <figure class="carousel-slide"><img src="assets/laboratorio-carrossel-01.jpeg" alt="Profissionais da mYo a trabalhar no laboratório e a cuidar dos pintos." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-carrossel-02.jpeg" alt="Trabalho e cuidados relacionados com a criação de pintos." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-carrossel-03.jpeg" alt="Imagens de apoio da equipa e dos cuidados com pintos." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-carrossel-04.jpeg" alt="Imagens de apoio da mYo." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-carrossel-05.jpeg" alt="Imagens de apoio da mYo." loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="carousel-dots" aria-hidden="true"><span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span></div>
+    </section>
+
+    <section class="section" id="como-ajuda">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Conhece o Kit Salva Pintos</span>
+          <h2>Uma forma mais prática de organizar os cuidados.</h2>
+          <p>O Kit Salva Pintos da mYo reúne materiais de apoio para te ajudar a transformar informação dispersa numa rotina mais organizada.</p>
+        </div>
+        <div class="story">
+          <p>Em vez de dependeres apenas da memória, de apontamentos soltos ou de conselhos diferentes de várias pessoas, podes consultar os materiais do kit quando precisares de apoio para planear os cuidados da tua criação.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit"><b>✓ Mais organização</b><p>Tem os cuidados essenciais melhor estruturados e mais fáceis de consultar.</p></article>
+          <article class="benefit"><b>✓ Menos improviso</b><p>Prepara-te melhor para as necessidades da criação e organiza a tua rotina.</p></article>
+          <article class="benefit"><b>✓ Mais confiança na rotina</b><p>Conta com materiais de apoio para orientar o teu dia a dia.</p></article>
+          <article class="benefit"><b>✓ Atenção desde os primeiros dias</b><p>Cria o hábito de planear os cuidados e de procurar orientação quando necessário.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-carousel photo-carousel-before-offer" aria-label="Galeria de imagens mYo">
+      <div class="carousel-track" id="ofertaTrack">
+        <figure class="carousel-slide"><img src="assets/laboratorio-oferta-01.jpeg" alt="Equipa mYo e materiais de apoio à criação." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-oferta-02.jpeg" alt="Imagens de apoio sobre incubação e cuidados com pintos." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-oferta-03.jpeg" alt="Imagens de apoio da equipa mYo." loading="lazy" decoding="async"></figure>
+        <figure class="carousel-slide"><img src="assets/laboratorio-oferta-04.jpeg" alt="Imagens de apoio da mYo." loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="carousel-dots" aria-hidden="true"><span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span></div>
+    </section>
+
+    <section class="section soft" id="oferta">
+      <div class="wrap offer-layout">
+        <div class="section-head">
+          <span class="kicker">O teu próximo passo começa aqui</span>
+          <h2>Não esperes até surgir um problema para procurar orientação.</h2>
+          <p>Se já crias pintos ou estás a pensar começar, dá um passo em direcção a cuidados mais organizados.</p>
+        </div>
+        <a class="offer-image full-bleed-image" id="offer-image-link" href="https://pagar.co.mz/p/kit-salva-pintos-myo-7-dias-garantia-zrlrz4" aria-label="Conhecer e comprar o Kit Salva Pintos">
+          <img src="assets/oferta-kit.jpg" alt="Oferta do Kit Salva Pintos da mYo com guias, checklists, calendário de maneio e materiais de apoio." loading="lazy">
+        </a>
+        <div class="offer-cta-wrap">
+          <a class="cta offer-cta" id="offer-cta" href="https://pagar.co.mz/p/kit-salva-pintos-myo-7-dias-garantia-zrlrz4">QUERO O MEU KIT SALVA PINTOS <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="story" style="margin-top:24px;text-align:center">
+          <p><strong>Cuida melhor. Organiza-te melhor. Dá à tua criação a atenção que ela merece.</strong></p>
+          <p>mYo — Cuida · Nutre · Vive</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="brand-mark" style="color:#fff">mY<i>o</i></div>
+      <b>CUIDA · NUTRE · VIVE</b>
+      <span>Kit Salva Pintos · Conteúdo educativo de apoio à criação.</span>
+      <p class="disclaimer">Nota: o kit é um material educativo de apoio à criação. Segue as orientações do fabricante da ração e procura assistência veterinária perante sinais de doença ou mortalidade.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function startCarousel(trackId) {
+        const track = document.getElementById(trackId);
+        if (!track) return;
+        const carousel = track.closest('.photo-carousel');
+        const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+        const slides = Array.from(track.children);
+        if (slides.length < 2) return;
+        let index = 0;
+        function showSlide(nextIndex) {
+          index = (nextIndex + slides.length) % slides.length;
+          track.style.transform = 'translateX(' + (-index * 100) + '%)';
+          dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+        }
+        showSlide(0);
+        if (!reducedMotion) window.setInterval(() => showSlide(index + 1), 3600);
+      }
+      startCarousel('laboratorioTrack');
+      startCarousel('ofertaTrack');
+    })();
+  </script>
+</body>
+</html>
